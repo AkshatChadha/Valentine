@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<style>
+    body{
+        background-color: pink;
+    }
+    .heart {
+    display: inline-block;
+    width: 600px;
+    aspect-ratio: 1;
+    border-image: radial-gradient(rgb(240, 27, 27) 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+    
+    
+  }
+
+  .outer{
+    display: flex;
+    align-items: center;
+    margin-left: 21%;
+    margin-top: 7%;
+    
+
+  }
+
+  button{
+    background-color:rgb(240, 27, 27);
+    color: pink;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;  
+  }
+
+
+  .emcee
+{
+    position: relative;
+    z-index: 2;   
+}
+
+  p{
+    margin-top: 200px;
+    margin-left: 125px;
+    font-size: 35px;
+    color: pink;
+    font-weight: 300; 
+  }
+
+  #runawayButton {
+      position: absolute;
+      top: 51%;
+      left: 72%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    button:hover{
+        box-shadow: 0px 0px 5px rgb(240, 27, 27);
+        border-style: solid;
+        border-width: -15px;
+        border-color: pink;
+
+    }
+
+    .small{
+        margin-top: 10px;
+        margin-left: 240px;
+        font-size: 15px;
+    }
+
+
+  
+
+</style>
+<body>
+    
+
+    <div class="outer">
+
+    <button class="Yes" onclick="alert('Congratulations! You made the right choice.');">Yes</button>
+    <div class="heart">
+        <p>
+            Will you be my valentine?
+        </p>
+
+        <p class="small">
+            (I dare you to click no)
+        </p>
+    </div>
+    <button id='runawayButton' onmouseover="runAway()">No
+    </button>
+
+</div>
+
+  
+
+</body>
+
+<script>
+    function runAway() {
+    // Get the button element
+    var button = document.getElementById('runawayButton');
+
+    // Generate random positions within the window
+    var newX = Math.random() * (window.innerWidth - button.offsetWidth);
+    var newY = Math.random() * (window.innerHeight - button.offsetHeight);
+
+    // Apply the new positions
+    button.style.left = newX + 'px';
+    button.style.top = newY + 'px';
+  }
+   
+
+
+</script>
+
+</html>
+  
